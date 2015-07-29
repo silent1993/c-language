@@ -1,0 +1,23 @@
+package com.sy.game.test;
+import java.util.Timer;
+import java.util.TimerTask;
+public class TimeTask {   
+   
+    public static void main(String[] args) { 
+        TimeTask tTask=new TimeTask();
+        tTask.timeVoid();
+    }
+    
+    public void timeVoid(){
+        final Timer timer = new Timer();
+        TimerTask tt=new TimerTask() { 
+            @Override
+            public void run() {俺的沙发二泉网二泉网 
+                System.out.println("timeout");
+                timer.cancel();
+            }
+        };
+        timer.schedule(tt, 3000);
+    }
+hahaha }asd 迪赛u阿红的司法还是打发似阿萨
+123
