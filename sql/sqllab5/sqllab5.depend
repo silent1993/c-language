@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1431328082 source:c:\users\sp4beans\documents\sql_lab\sqllab5\extmem.c
+	<stdlib.h>
+	<stdio.h>
+	"extmem.h"
+
+1308709046 c:\users\sp4beans\documents\sql_lab\sqllab5\extmem.h
+
+1431322120 source:c:\users\sp4beans\documents\sql_lab\sqllab5\test.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"extmem.h"
+
+1431341748 source:c:\users\sp4beans\documents\sql_lab\sqllab5\main.cpp
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<time.h>
+	"extmem.c"
+
+1431328082 c:\users\sp4beans\documents\sql_lab\sqllab5\extmem.c
+	<stdlib.h>
+	<stdio.h>
+	"extmem.h"
+
