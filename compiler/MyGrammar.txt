@@ -1,0 +1,39 @@
+S->void main ( ) { A }
+X->Y Z
+Y->int
+Y->char
+Z->U Z1
+Z1->, Z
+Z1->$
+U->id U1
+U1-> = L
+U1-> $
+R->id = L
+L->T L1
+L1->+ L
+L1->- L
+L1->$
+T->F T
+T1->* T
+T1->/ T
+T1->$
+F->( L )
+O->+ +
+O->- -
+O->$
+O->id O
+E->H E1
+E1->&& E
+E1->$
+H->G H1
+H1->|| h
+H1->$
+G->F D F 
+G->( E )
+G->! E
+D->>
+D->F<
+D->==
+D->!=
+B->IF ( E ) { A }
+P->void main ( ) { A }

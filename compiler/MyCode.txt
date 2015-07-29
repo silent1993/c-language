@@ -1,0 +1,30 @@
+int main(int a,int b)
+{
+    int i=0,j=2;
+    int j[10]= {0};
+    if(a==1)
+    {
+        b=2*a;
+    }
+    else
+    {
+        a++;
+    }
+    while(b>7)
+    {
+        i=5+(a*b);
+    }
+    for(j=0; j<5; j++)
+    {
+        if(j==2)
+        {
+            a--;
+        }
+    }
+}
+float func(float a)
+{
+    int b=5;
+    a=4*b;
+    return a;
+}
