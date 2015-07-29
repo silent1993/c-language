@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\vhdl\four_3\store_v.ncd
+OUTFILE=D:\vhdl\four_3\store_v.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4pq208
+WORKINGDIR=D:\vhdl\four_3
+LICENSE=WebPack
+USER_INFO=__0_0_0

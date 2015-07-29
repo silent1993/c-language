@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/vhdl/cpu/cpu_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="cpu_tb" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/cpu_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/idb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">idb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">idb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/dbus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dbus[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dbus[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/abus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">abus[15:0]</obj_property>
+      <obj_property name="ObjectShortName">abus[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/nmreq" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nmreq</obj_property>
+      <obj_property name="ObjectShortName">nmreq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/irout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">irout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">irout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/abusout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">abusout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">abusout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/dbusout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dbusout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dbusout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/timeout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">timeout[3:0]</obj_property>
+      <obj_property name="ObjectShortName">timeout[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/nrd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nrd</obj_property>
+      <obj_property name="ObjectShortName">nrd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/nwr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nwr</obj_property>
+      <obj_property name="ObjectShortName">nwr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/nbhe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nbhe</obj_property>
+      <obj_property name="ObjectShortName">nbhe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/nble" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nble</obj_property>
+      <obj_property name="ObjectShortName">nble</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/odb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">odb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">odb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/uut/element5/pcnew" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcnew[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pcnew[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/mreq" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mreq</obj_property>
+      <obj_property name="ObjectShortName">mreq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/rd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/bhe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bhe</obj_property>
+      <obj_property name="ObjectShortName">bhe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/ble" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ble</obj_property>
+      <obj_property name="ObjectShortName">ble</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/preq" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">preq</obj_property>
+      <obj_property name="ObjectShortName">preq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/prd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">prd</obj_property>
+      <obj_property name="ObjectShortName">prd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/pwr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pwr</obj_property>
+      <obj_property name="ObjectShortName">pwr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>

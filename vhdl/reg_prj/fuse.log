@@ -1,0 +1,8 @@
+Running: D:\xilinx\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o I:/vhdl/reg_prj/he_th_isim_beh.exe -prj I:/vhdl/reg_prj/he_th_beh.prj he_th 
+ISim O.87xd (signature 0xc3576ebc)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "I:/vhdl/reg_prj/catche1.vhd" into library work
+Parsing VHDL file "I:/vhdl/reg_prj/catch1_tb.vhd" into library work
+ERROR:Simulator:702 - Can not find design unit he_th in library work located at isim/work 

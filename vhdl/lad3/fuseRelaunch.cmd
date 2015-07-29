@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/vhdl/lad3/state_TB_isim_beh.exe" -prj "D:/vhdl/lad3/state_TB_beh.prj" "work.state_TB" 

@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "D:/vhdl/four_3/store_v.xst" -ofn "D:/vhdl/four_3/store_v.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_3/store_v.xst" -ofn "D:/vhdl/four_3/store_v.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_3/store_v.xst" -ofn "D:/vhdl/four_3/store_v.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_3/store_v.xst" -ofn "D:/vhdl/four_3/store_v.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four3.ucf -p xc3s500e-pq208-4 store_v.ngc store_v.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o store_v_map.ncd store_v.ngd store_v.pcf 
+par -w -intstyle ise -ol high -t 1 store_v_map.ncd store_v.ncd store_v.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four3.ucf -p xc3s500e-pq208-4 store_v.ngc store_v.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o store_v_map.ncd store_v.ngd store_v.pcf 
+par -w -intstyle ise -ol high -t 1 store_v_map.ncd store_v.ncd store_v.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml store_v.twx store_v.ncd -o store_v.twr store_v.pcf -ucf four3.ucf 
+bitgen -intstyle ise -f store_v.ut store_v.ncd 

@@ -1,0 +1,963 @@
+Release 14.4 - xst P.49d (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-pq208
+
+---- Source Options
+Top Module Name                    : CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/vhdl/cpu/number1.vhd" in Library work.
+Architecture behavioral of Entity number1 is up to date.
+Compiling vhdl file "D:/vhdl/cpu/quzhi.vhd" in Library work.
+Architecture behavioral of Entity quzhi is up to date.
+Compiling vhdl file "D:/vhdl/cpu/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "D:/vhdl/cpu/visit_M.vhd" in Library work.
+Architecture behavioral of Entity visit_m is up to date.
+Compiling vhdl file "D:/vhdl/cpu/back.vhd" in Library work.
+Entity <back> compiled.
+Entity <back> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/vhdl/cpu/ctrl_M.vhd" in Library work.
+Architecture behavioral of Entity ctrl_m is up to date.
+Compiling vhdl file "D:/vhdl/cpu/CPU.vhd" in Library work.
+Entity <cpu> compiled.
+Entity <cpu> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CPU> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <number1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <quzhi> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <visit_M> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <back> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ctrl_M> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <CPU> in library <work> (Architecture <behavioral>).
+Entity <CPU> analyzed. Unit <CPU> generated.
+
+Analyzing Entity <number1> in library <work> (Architecture <behavioral>).
+Entity <number1> analyzed. Unit <number1> generated.
+
+Analyzing Entity <quzhi> in library <work> (Architecture <behavioral>).
+Entity <quzhi> analyzed. Unit <quzhi> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/vhdl/cpu/alu.vhd" line 52: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reg>
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing Entity <visit_M> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <PREQ> in unit <visit_M> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <visit_M> analyzed. Unit <visit_M> generated.
+
+Analyzing Entity <back> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/vhdl/cpu/back.vhd" line 51: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <adir>, <Atemp>, <addr>, <Rtemp>
+INFO:Xst:2679 - Register <PCupdate> in unit <back> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Rupdate> in unit <back> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <back> analyzed. Unit <back> generated.
+
+Analyzing Entity <ctrl_M> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <nMREQ> in unit <ctrl_M> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <nBLE> in unit <ctrl_M> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <MREQ> in unit <ctrl_M> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <BLE> in unit <ctrl_M> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DBUS<15>> in unit <ctrl_M> has a constant value of Z during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DBUS<14>> in unit <ctrl_M> has a constant value of Z during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DBUS<13>> in unit <ctrl_M> has a constant value of Z during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DBUS<12>> in unit <ctrl_M> has a constant value of Z during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DBUS<11>> in unit <ctrl_M> has a constant value of Z during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DBUS<10>> in unit <ctrl_M> has a constant value of Z during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DBUS<9>> in unit <ctrl_M> has a constant value of Z during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DBUS<8>> in unit <ctrl_M> has a constant value of Z during circuit operation. The register is replaced by logic.
+Entity <ctrl_M> analyzed. Unit <ctrl_M> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2561 - Always blocking tristate driving signal <DBUS> in unit <ctrl_M> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <DBUS> in unit <ctrl_M> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <DBUS> in unit <ctrl_M> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <DBUS> in unit <ctrl_M> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <DBUS> in unit <ctrl_M> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <DBUS> in unit <ctrl_M> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <DBUS> in unit <ctrl_M> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <DBUS> in unit <ctrl_M> is removed.
+
+Synthesizing Unit <number1>.
+    Related source file is "D:/vhdl/cpu/number1.vhd".
+    Found 4-bit register for signal <TIMEOUT>.
+    Found 1-bit register for signal <T1>.
+    Found 1-bit register for signal <T2>.
+    Found 1-bit register for signal <T3>.
+    Found 1-bit register for signal <T4>.
+    Found 32-bit register for signal <tem>.
+    Found 32-bit adder for signal <tem$add0000> created at line 56.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <number1> synthesized.
+
+
+Synthesizing Unit <quzhi>.
+    Related source file is "D:/vhdl/cpu/quzhi.vhd".
+    Register <IROUT> equivalent to <IR> has been removed
+WARNING:Xst:737 - Found 16-bit latch for signal <TPC>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 16-bit latch for signal <IR>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 16-bit latch for signal <PC>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+Unit <quzhi> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "D:/vhdl/cpu/alu.vhd".
+WARNING:Xst:646 - Signal <ad2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <Atemp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <Btemp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <OP>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <ALUOUT>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ADDR_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <reg_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <reg_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <reg_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <reg_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <reg_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <reg_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <reg_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <reg_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit 8-to-1 multiplexer for signal <$varindex0000> created at line 67.
+    Found 8-bit 8-to-1 multiplexer for signal <$varindex0001> created at line 74.
+    Found 8-bit 4-to-1 multiplexer for signal <ALUOUT$mux0005> created at line 76.
+    Found 8-bit addsub for signal <ALUOUT$share0000> created at line 82.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 Multiplexer(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <visit_M>.
+    Related source file is "D:/vhdl/cpu/visit_M.vhd".
+WARNING:Xst:1780 - Signal <a> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <PWR>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <Rtemp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <ODB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PRD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <dataout>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+Unit <visit_M> synthesized.
+
+
+Synthesizing Unit <back>.
+    Related source file is "D:/vhdl/cpu/back.vhd".
+WARNING:Xst:647 - Input <IR<13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <IR<11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <IR<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 8-bit latch for signal <Rdata>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 3-bit latch for signal <Raddr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 16-bit latch for signal <PCnew>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit adder for signal <PCnew$mux0003> created at line 56.
+    Found 3-bit 4-to-1 multiplexer for signal <Raddr$mux0001> created at line 56.
+    Found 8-bit 4-to-1 multiplexer for signal <Rdata$mux0001> created at line 56.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 Multiplexer(s).
+Unit <back> synthesized.
+
+
+Synthesizing Unit <ctrl_M>.
+    Related source file is "D:/vhdl/cpu/ctrl_M.vhd".
+    Register <ABUSOUT> equivalent to <ABUS> has been removed
+    Register <WR> equivalent to <nRD> has been removed
+    Register <RD> equivalent to <nWR> has been removed
+WARNING:Xst:737 - Found 1-bit latch for signal <nBHE>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtridata_DBUS<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtridata_DBUS<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtridata_DBUS<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtridata_DBUS<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 16-bit latch for signal <ABUS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtridata_DBUS<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtridata_DBUS<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtridata_DBUS<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtridata_DBUS<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 16-bit latch for signal <MPC>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <MADDR>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 16-bit latch for signal <DBUSOUT>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nRD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <BHE>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nWR>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtrien_DBUS<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtrien_DBUS<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtrien_DBUS<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtrien_DBUS<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtrien_DBUS<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtrien_DBUS<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtrien_DBUS<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <Mtrien_DBUS<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit tristate buffer for signal <DBUS<7>>.
+    Found 1-bit tristate buffer for signal <DBUS<6>>.
+    Found 1-bit tristate buffer for signal <DBUS<5>>.
+    Found 1-bit tristate buffer for signal <DBUS<4>>.
+    Found 1-bit tristate buffer for signal <DBUS<3>>.
+    Found 1-bit tristate buffer for signal <DBUS<2>>.
+    Found 1-bit tristate buffer for signal <DBUS<1>>.
+    Found 1-bit tristate buffer for signal <DBUS<0>>.
+    Summary:
+	inferred   8 Tristate(s).
+Unit <ctrl_M> synthesized.
+
+
+Synthesizing Unit <CPU>.
+    Related source file is "D:/vhdl/cpu/CPU.vhd".
+Unit <CPU> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 8-bit addsub                                          : 1
+# Registers                                            : 6
+ 1-bit register                                        : 4
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+# Latches                                              : 63
+ 1-bit latch                                           : 38
+ 16-bit latch                                          : 7
+ 3-bit latch                                           : 1
+ 5-bit latch                                           : 1
+ 8-bit latch                                           : 16
+# Multiplexers                                         : 5
+ 3-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+ 8-bit 8-to-1 multiplexer                              : 2
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <tem_2> in Unit <element1> is equivalent to the following 29 FFs/Latches, which will be removed : <tem_3> <tem_4> <tem_5> <tem_6> <tem_7> <tem_8> <tem_9> <tem_10> <tem_11> <tem_12> <tem_13> <tem_14> <tem_15> <tem_16> <tem_17> <tem_18> <tem_19> <tem_20> <tem_21> <tem_22> <tem_23> <tem_24> <tem_25> <tem_26> <tem_27> <tem_28> <tem_29> <tem_30> <tem_31> 
+INFO:Xst:2261 - The FF/Latch <TIMEOUT_0> in Unit <element1> is equivalent to the following FF/Latch, which will be removed : <T1> 
+INFO:Xst:2261 - The FF/Latch <TIMEOUT_1> in Unit <element1> is equivalent to the following FF/Latch, which will be removed : <T2> 
+WARNING:Xst:1710 - FF/Latch <tem_2> (without init value) has a constant value of 0 in block <element1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <tem<31:2>> (without init value) have a constant value of 0 in block <number1>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 8-bit addsub                                          : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+# Latches                                              : 63
+ 1-bit latch                                           : 38
+ 16-bit latch                                          : 7
+ 3-bit latch                                           : 1
+ 5-bit latch                                           : 1
+ 8-bit latch                                           : 16
+# Multiplexers                                         : 5
+ 3-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+ 8-bit 8-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <TIMEOUT_0> in Unit <number1> is equivalent to the following FF/Latch, which will be removed : <T1> 
+INFO:Xst:2261 - The FF/Latch <TIMEOUT_1> in Unit <number1> is equivalent to the following FF/Latch, which will be removed : <T2> 
+INFO:Xst:2261 - The FF/Latch <TIMEOUT_3> in Unit <number1> is equivalent to the following FF/Latch, which will be removed : <T4> 
+INFO:Xst:2261 - The FF/Latch <TIMEOUT_2> in Unit <number1> is equivalent to the following FF/Latch, which will be removed : <T3> 
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <number1> ...
+
+Optimizing unit <quzhi> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <visit_M> ...
+
+Optimizing unit <back> ...
+WARNING:Xst:2677 - Node <element2/TPC_15> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_14> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_13> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_12> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_11> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_10> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_9> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_8> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_7> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_6> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_5> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_4> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_3> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_2> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_1> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <element2/TPC_0> of sequential type is unconnected in block <CPU>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 4.
+Latch element2/IR_15 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_14 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_13 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_12 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_11 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_10 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_9 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_8 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_7 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_6 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_5 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_4 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_3 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_2 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_1 has been replicated 1 time(s) to handle iob=true attribute.
+Latch element2/IR_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CPU.ngr
+Top Level Output File Name         : CPU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 131
+
+Cell Usage :
+# BELS                             : 482
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 92
+#      LUT3                        : 136
+#      LUT4                        : 113
+#      LUT4_L                      : 15
+#      MUXCY                       : 22
+#      MUXF5                       : 61
+#      MUXF6                       : 16
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 292
+#      FDC                         : 2
+#      FDCE                        : 4
+#      LD                          : 98
+#      LDC                         : 2
+#      LDCP                        : 16
+#      LDCPE                       : 16
+#      LDE                         : 88
+#      LDE_1                       : 64
+#      LDP                         : 2
+# Clock Buffers                    : 6
+#      BUFG                        : 5
+#      BUFGP                       : 1
+# IO Buffers                       : 130
+#      IBUF                        : 33
+#      IOBUF                       : 8
+#      OBUF                        : 89
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500epq208-4 
+
+ Number of Slices:                      207  out of   4656     4%  
+ Number of Slice Flip Flops:            244  out of   9312     2%  
+ Number of 4 input LUTs:                357  out of   9312     3%  
+ Number of IOs:                         131
+ Number of bonded IOBs:                 131  out of    158    82%  
+    IOB Flip Flops:                      48
+ Number of GCLKs:                         6  out of     24    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------+---------------------------------+-------+
+Clock Signal                                                       | Clock buffer(FF name)           | Load  |
+-------------------------------------------------------------------+---------------------------------+-------+
+element1/TIMEOUT_01                                                | BUFG                            | 24    |
+element1/TIMEOUT_21                                                | BUFG                            | 70    |
+element6/Mtrien_DBUS<0>_not0001(element6/Mtrien_DBUS<0>_not00011:O)| NONE(*)(element6/Mtrien_DBUS<0>)| 8     |
+CLK                                                                | BUFGP                           | 6     |
+RST                                                                | IBUF+BUFG                       | 48    |
+element1/TIMEOUT_11                                                | BUFG                            | 29    |
+element3/reg_7_cmp_eq0000(element3/reg_7_cmp_eq00001:O)            | NONE(*)(element3/reg_7_7)       | 8     |
+element3/reg_6_cmp_eq0000(element3/reg_6_cmp_eq00001:O)            | NONE(*)(element3/reg_6_7)       | 8     |
+element3/reg_5_cmp_eq0000(element3/reg_5_cmp_eq00001:O)            | NONE(*)(element3/reg_5_7)       | 8     |
+element3/reg_4_cmp_eq0000(element3/reg_4_cmp_eq00001:O)            | NONE(*)(element3/reg_4_7)       | 8     |
+element3/reg_3_cmp_eq0000(element3/reg_3_cmp_eq00001:O)            | NONE(*)(element3/reg_3_7)       | 8     |
+element3/reg_2_cmp_eq0000(element3/reg_2_cmp_eq00001:O)            | NONE(*)(element3/reg_2_7)       | 8     |
+element3/reg_1_cmp_eq0000(element3/reg_1_cmp_eq00001:O)            | NONE(*)(element3/reg_1_7)       | 8     |
+element3/reg_0_not0001(element3/reg_0_not00011:O)                  | NONE(*)(element3/reg_0_7)       | 8     |
+element2/IR_11                                                     | NONE(element3/ADDR_1)           | 16    |
+element1/TIMEOUT_31                                                | BUFG                            | 27    |
+-------------------------------------------------------------------+---------------------------------+-------+
+(*) These 9 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------+--------------------------+-------+
+Control Signal                                               | Buffer(FF name)          | Load  |
+-------------------------------------------------------------+--------------------------+-------+
+RST                                                          | IBUF                     | 6     |
+element1/TIMEOUT_01(element1/TIMEOUT_0:Q)                    | NONE(element6/BHE)       | 4     |
+element6/ABUS_0__and0000(element6/ABUS_0__and00001:O)        | NONE(element6/ABUS_0)    | 1     |
+element6/ABUS_0__and0001(element6/ABUS_0__and00011:O)        | NONE(element6/ABUS_0)    | 1     |
+element6/ABUS_10__and0000(element6/ABUS_10__and00001:O)      | NONE(element6/ABUS_10)   | 1     |
+element6/ABUS_10__and0001(element6/ABUS_10__and00011:O)      | NONE(element6/ABUS_10)   | 1     |
+element6/ABUS_11__and0000(element6/ABUS_11__and00001:O)      | NONE(element6/ABUS_11)   | 1     |
+element6/ABUS_11__and0001(element6/ABUS_11__and00011:O)      | NONE(element6/ABUS_11)   | 1     |
+element6/ABUS_12__and0000(element6/ABUS_12__and00001:O)      | NONE(element6/ABUS_12)   | 1     |
+element6/ABUS_12__and0001(element6/ABUS_12__and00011:O)      | NONE(element6/ABUS_12)   | 1     |
+element6/ABUS_13__and0000(element6/ABUS_13__and00001:O)      | NONE(element6/ABUS_13)   | 1     |
+element6/ABUS_13__and0001(element6/ABUS_13__and00011:O)      | NONE(element6/ABUS_13)   | 1     |
+element6/ABUS_14__and0000(element6/ABUS_14__and00001:O)      | NONE(element6/ABUS_14)   | 1     |
+element6/ABUS_14__and0001(element6/ABUS_14__and00011:O)      | NONE(element6/ABUS_14)   | 1     |
+element6/ABUS_15__and0000(element6/ABUS_15__and00001:O)      | NONE(element6/ABUS_15)   | 1     |
+element6/ABUS_15__and0001(element6/ABUS_15__and00011:O)      | NONE(element6/ABUS_15)   | 1     |
+element6/ABUS_1__and0000(element6/ABUS_1__and00001:O)        | NONE(element6/ABUS_1)    | 1     |
+element6/ABUS_1__and0001(element6/ABUS_1__and00011:O)        | NONE(element6/ABUS_1)    | 1     |
+element6/ABUS_2__and0000(element6/ABUS_2__and00001:O)        | NONE(element6/ABUS_2)    | 1     |
+element6/ABUS_2__and0001(element6/ABUS_2__and00011:O)        | NONE(element6/ABUS_2)    | 1     |
+element6/ABUS_3__and0000(element6/ABUS_3__and00001:O)        | NONE(element6/ABUS_3)    | 1     |
+element6/ABUS_3__and0001(element6/ABUS_3__and00011:O)        | NONE(element6/ABUS_3)    | 1     |
+element6/ABUS_4__and0000(element6/ABUS_4__and00001:O)        | NONE(element6/ABUS_4)    | 1     |
+element6/ABUS_4__and0001(element6/ABUS_4__and00011:O)        | NONE(element6/ABUS_4)    | 1     |
+element6/ABUS_5__and0000(element6/ABUS_5__and00001:O)        | NONE(element6/ABUS_5)    | 1     |
+element6/ABUS_5__and0001(element6/ABUS_5__and00011:O)        | NONE(element6/ABUS_5)    | 1     |
+element6/ABUS_6__and0000(element6/ABUS_6__and00001:O)        | NONE(element6/ABUS_6)    | 1     |
+element6/ABUS_6__and0001(element6/ABUS_6__and00011:O)        | NONE(element6/ABUS_6)    | 1     |
+element6/ABUS_7__and0000(element6/ABUS_7__and00001:O)        | NONE(element6/ABUS_7)    | 1     |
+element6/ABUS_7__and0001(element6/ABUS_7__and00011:O)        | NONE(element6/ABUS_7)    | 1     |
+element6/ABUS_8__and0000(element6/ABUS_8__and00001:O)        | NONE(element6/ABUS_8)    | 1     |
+element6/ABUS_8__and0001(element6/ABUS_8__and00011:O)        | NONE(element6/ABUS_8)    | 1     |
+element6/ABUS_9__and0000(element6/ABUS_9__and00001:O)        | NONE(element6/ABUS_9)    | 1     |
+element6/ABUS_9__and0001(element6/ABUS_9__and00011:O)        | NONE(element6/ABUS_9)    | 1     |
+element6/DBUSOUT_0__and0000(element6/DBUSOUT_0__and00001:O)  | NONE(element6/DBUSOUT_0) | 1     |
+element6/DBUSOUT_0__and0001(element6/DBUSOUT_0__and00011:O)  | NONE(element6/DBUSOUT_0) | 1     |
+element6/DBUSOUT_10__and0000(element6/DBUSOUT_10__and00001:O)| NONE(element6/DBUSOUT_10)| 1     |
+element6/DBUSOUT_10__and0001(element6/DBUSOUT_10__and00011:O)| NONE(element6/DBUSOUT_10)| 1     |
+element6/DBUSOUT_11__and0000(element6/DBUSOUT_11__and00001:O)| NONE(element6/DBUSOUT_11)| 1     |
+element6/DBUSOUT_11__and0001(element6/DBUSOUT_11__and00011:O)| NONE(element6/DBUSOUT_11)| 1     |
+element6/DBUSOUT_12__and0000(element6/DBUSOUT_12__and00001:O)| NONE(element6/DBUSOUT_12)| 1     |
+element6/DBUSOUT_12__and0001(element6/DBUSOUT_12__and00011:O)| NONE(element6/DBUSOUT_12)| 1     |
+element6/DBUSOUT_13__and0000(element6/DBUSOUT_13__and00001:O)| NONE(element6/DBUSOUT_13)| 1     |
+element6/DBUSOUT_13__and0001(element6/DBUSOUT_13__and00011:O)| NONE(element6/DBUSOUT_13)| 1     |
+element6/DBUSOUT_14__and0000(element6/DBUSOUT_14__and00001:O)| NONE(element6/DBUSOUT_14)| 1     |
+element6/DBUSOUT_14__and0001(element6/DBUSOUT_14__and00011:O)| NONE(element6/DBUSOUT_14)| 1     |
+element6/DBUSOUT_15__and0000(element6/DBUSOUT_15__and00001:O)| NONE(element6/DBUSOUT_15)| 1     |
+element6/DBUSOUT_15__and0001(element6/DBUSOUT_15__and00011:O)| NONE(element6/DBUSOUT_15)| 1     |
+element6/DBUSOUT_1__and0000(element6/DBUSOUT_1__and00001:O)  | NONE(element6/DBUSOUT_1) | 1     |
+element6/DBUSOUT_1__and0001(element6/DBUSOUT_1__and00011:O)  | NONE(element6/DBUSOUT_1) | 1     |
+element6/DBUSOUT_2__and0000(element6/DBUSOUT_2__and00001:O)  | NONE(element6/DBUSOUT_2) | 1     |
+element6/DBUSOUT_2__and0001(element6/DBUSOUT_2__and00011:O)  | NONE(element6/DBUSOUT_2) | 1     |
+element6/DBUSOUT_3__and0000(element6/DBUSOUT_3__and00001:O)  | NONE(element6/DBUSOUT_3) | 1     |
+element6/DBUSOUT_3__and0001(element6/DBUSOUT_3__and00011:O)  | NONE(element6/DBUSOUT_3) | 1     |
+element6/DBUSOUT_4__and0000(element6/DBUSOUT_4__and00001:O)  | NONE(element6/DBUSOUT_4) | 1     |
+element6/DBUSOUT_4__and0001(element6/DBUSOUT_4__and00011:O)  | NONE(element6/DBUSOUT_4) | 1     |
+element6/DBUSOUT_5__and0000(element6/DBUSOUT_5__and00001:O)  | NONE(element6/DBUSOUT_5) | 1     |
+element6/DBUSOUT_5__and0001(element6/DBUSOUT_5__and00011:O)  | NONE(element6/DBUSOUT_5) | 1     |
+element6/DBUSOUT_6__and0000(element6/DBUSOUT_6__and00001:O)  | NONE(element6/DBUSOUT_6) | 1     |
+element6/DBUSOUT_6__and0001(element6/DBUSOUT_6__and00011:O)  | NONE(element6/DBUSOUT_6) | 1     |
+element6/DBUSOUT_7__and0000(element6/DBUSOUT_7__and00001:O)  | NONE(element6/DBUSOUT_7) | 1     |
+element6/DBUSOUT_7__and0001(element6/DBUSOUT_7__and00011:O)  | NONE(element6/DBUSOUT_7) | 1     |
+element6/DBUSOUT_8__and0000(element6/DBUSOUT_8__and00001:O)  | NONE(element6/DBUSOUT_8) | 1     |
+element6/DBUSOUT_8__and0001(element6/DBUSOUT_8__and00011:O)  | NONE(element6/DBUSOUT_8) | 1     |
+element6/DBUSOUT_9__and0000(element6/DBUSOUT_9__and00001:O)  | NONE(element6/DBUSOUT_9) | 1     |
+element6/DBUSOUT_9__and0001(element6/DBUSOUT_9__and00011:O)  | NONE(element6/DBUSOUT_9) | 1     |
+-------------------------------------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.163ns (Maximum Frequency: 162.259MHz)
+   Minimum input arrival time before clock: 6.122ns
+   Maximum output required time after clock: 5.163ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'element1/TIMEOUT_01'
+  Clock period: 2.214ns (frequency: 451.671MHz)
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               2.214ns (Levels of Logic = 1)
+  Source:            element6/MADDR_7 (LATCH)
+  Destination:       element6/MADDR_7 (LATCH)
+  Source Clock:      element1/TIMEOUT_01 rising
+  Destination Clock: element1/TIMEOUT_01 rising
+
+  Data Path: element6/MADDR_7 to element6/MADDR_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            2   0.676   0.526  element6/MADDR_7 (element6/MADDR_7)
+     LUT4:I1->O            1   0.704   0.000  element6/MADDR_mux0003<7>1 (element6/MADDR_mux0003<7>)
+     LDE_1:D                   0.308          element6/MADDR_7
+    ----------------------------------------
+    Total                      2.214ns (1.688ns logic, 0.526ns route)
+                                       (76.2% logic, 23.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'element1/TIMEOUT_21'
+  Clock period: 3.438ns (frequency: 290.867MHz)
+  Total number of paths / destination ports: 46 / 38
+-------------------------------------------------------------------------
+Delay:               3.438ns (Levels of Logic = 2)
+  Source:            element4/Rtemp_7 (LATCH)
+  Destination:       element4/Rtemp_7 (LATCH)
+  Source Clock:      element1/TIMEOUT_21 falling
+  Destination Clock: element1/TIMEOUT_21 falling
+
+  Data Path: element4/Rtemp_7 to element4/Rtemp_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.676   0.451  element4/Rtemp_7 (element4/Rtemp_7)
+     LUT4:I3->O            1   0.704   0.595  element4/Rtemp_mux0001<7>_SW0 (N7)
+     LUT4:I0->O            1   0.704   0.000  element4/Rtemp_mux0001<7> (element4/Rtemp_mux0001<7>)
+     LD:D                      0.308          element4/Rtemp_7
+    ----------------------------------------
+    Total                      3.438ns (2.392ns logic, 1.046ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.692ns (frequency: 371.471MHz)
+  Total number of paths / destination ports: 11 / 6
+-------------------------------------------------------------------------
+Delay:               2.692ns (Levels of Logic = 1)
+  Source:            element1/tem_0 (FF)
+  Destination:       element1/tem_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: element1/tem_0 to element1/tem_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.591   0.669  element1/tem_0 (element1/tem_0)
+     INV:I->O              1   0.704   0.420  element1/tem_mux0003<31>1_INV_0 (element1/tem_mux0003<31>)
+     FDC:D                     0.308          element1/tem_0
+    ----------------------------------------
+    Total                      2.692ns (1.603ns logic, 1.089ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'element1/TIMEOUT_11'
+  Clock period: 6.163ns (frequency: 162.259MHz)
+  Total number of paths / destination ports: 82 / 16
+-------------------------------------------------------------------------
+Delay:               6.163ns (Levels of Logic = 11)
+  Source:            element3/Btemp_0 (LATCH)
+  Destination:       element3/ALUOUT_7 (LATCH)
+  Source Clock:      element1/TIMEOUT_11 falling
+  Destination Clock: element1/TIMEOUT_11 falling
+
+  Data Path: element3/Btemp_0 to element3/ALUOUT_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.676   0.455  element3/Btemp_0 (element3/Btemp_0)
+     LUT3:I2->O            3   0.704   0.566  element3/Btemp_mux0000<0>1 (element3/Btemp_mux0000<0>)
+     LUT3:I2->O            1   0.704   0.000  element3/Maddsub_ALUOUT_share0000_lut<0> (element3/Maddsub_ALUOUT_share0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  element3/Maddsub_ALUOUT_share0000_cy<0> (element3/Maddsub_ALUOUT_share0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  element3/Maddsub_ALUOUT_share0000_cy<1> (element3/Maddsub_ALUOUT_share0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  element3/Maddsub_ALUOUT_share0000_cy<2> (element3/Maddsub_ALUOUT_share0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  element3/Maddsub_ALUOUT_share0000_cy<3> (element3/Maddsub_ALUOUT_share0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  element3/Maddsub_ALUOUT_share0000_cy<4> (element3/Maddsub_ALUOUT_share0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  element3/Maddsub_ALUOUT_share0000_cy<5> (element3/Maddsub_ALUOUT_share0000_cy<5>)
+     MUXCY:CI->O           0   0.059   0.000  element3/Maddsub_ALUOUT_share0000_cy<6> (element3/Maddsub_ALUOUT_share0000_cy<6>)
+     XORCY:CI->O           1   0.804   0.424  element3/Maddsub_ALUOUT_share0000_xor<7> (element3/ALUOUT_share0000<7>)
+     LUT4:I3->O            1   0.704   0.000  element3/Mmux_ALUOUT_mux00052493 (element3/ALUOUT_mux0005<7>)
+     LD:D                      0.308          element3/ALUOUT_7
+    ----------------------------------------
+    Total                      6.163ns (4.718ns logic, 1.445ns route)
+                                       (76.6% logic, 23.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'element1/TIMEOUT_31'
+  Clock period: 2.970ns (frequency: 336.700MHz)
+  Total number of paths / destination ports: 22 / 11
+-------------------------------------------------------------------------
+Delay:               2.970ns (Levels of Logic = 2)
+  Source:            element5/Rdata_7 (LATCH)
+  Destination:       element5/Rdata_7 (LATCH)
+  Source Clock:      element1/TIMEOUT_31 falling
+  Destination Clock: element1/TIMEOUT_31 falling
+
+  Data Path: element5/Rdata_7 to element5/Rdata_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              10   0.676   0.961  element5/Rdata_7 (element5/Rdata_7)
+     LUT3:I1->O            1   0.704   0.000  element5/Mmux_Rdata_mux0001_47 (element5/Mmux_Rdata_mux0001_47)
+     MUXF5:I0->O           1   0.321   0.000  element5/Mmux_Rdata_mux0001_2_f5_6 (element5/Rdata_mux0001<7>)
+     LD:D                      0.308          element5/Rdata_7
+    ----------------------------------------
+    Total                      2.970ns (2.009ns logic, 0.961ns route)
+                                       (67.6% logic, 32.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'element1/TIMEOUT_01'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              2.867ns (Levels of Logic = 2)
+  Source:            DBUS<7> (PAD)
+  Destination:       element6/MADDR_7 (LATCH)
+  Destination Clock: element1/TIMEOUT_01 rising
+
+  Data Path: DBUS<7> to element6/MADDR_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           5   1.218   0.637  DBUS_7_IOBUF (N78)
+     LUT4:I3->O            1   0.704   0.000  element6/MADDR_mux0003<7>1 (element6/MADDR_mux0003<7>)
+     LDE_1:D                   0.308          element6/MADDR_7
+    ----------------------------------------
+    Total                      2.867ns (2.230ns logic, 0.637ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'element1/TIMEOUT_21'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              4.028ns (Levels of Logic = 3)
+  Source:            IDB<7> (PAD)
+  Destination:       element4/Rtemp_7 (LATCH)
+  Destination Clock: element1/TIMEOUT_21 falling
+
+  Data Path: IDB<7> to element4/Rtemp_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.499  IDB_7_IBUF (IDB_7_IBUF)
+     LUT4:I1->O            1   0.704   0.595  element4/Rtemp_mux0001<7>_SW0 (N7)
+     LUT4:I0->O            1   0.704   0.000  element4/Rtemp_mux0001<7> (element4/Rtemp_mux0001<7>)
+     LD:D                      0.308          element4/Rtemp_7
+    ----------------------------------------
+    Total                      4.028ns (2.934ns logic, 1.094ns route)
+                                       (72.8% logic, 27.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'element1/TIMEOUT_31'
+  Total number of paths / destination ports: 137 / 16
+-------------------------------------------------------------------------
+Offset:              6.122ns (Levels of Logic = 19)
+  Source:            adll<0> (PAD)
+  Destination:       element5/PCnew_15 (LATCH)
+  Destination Clock: element1/TIMEOUT_31 falling
+
+  Data Path: adll<0> to element5/PCnew_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.595  adll_0_IBUF (adll_0_IBUF)
+     LUT4:I0->O            1   0.704   0.499  element5/PCnew_mux0004<0>1 (element5/PCnew_mux0004<0>)
+     LUT2:I1->O            1   0.704   0.000  element5/Madd_PCnew_mux0003_lut<0> (element5/Madd_PCnew_mux0003_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  element5/Madd_PCnew_mux0003_cy<0> (element5/Madd_PCnew_mux0003_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<1> (element5/Madd_PCnew_mux0003_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<2> (element5/Madd_PCnew_mux0003_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<3> (element5/Madd_PCnew_mux0003_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<4> (element5/Madd_PCnew_mux0003_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<5> (element5/Madd_PCnew_mux0003_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<6> (element5/Madd_PCnew_mux0003_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<7> (element5/Madd_PCnew_mux0003_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<8> (element5/Madd_PCnew_mux0003_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<9> (element5/Madd_PCnew_mux0003_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<10> (element5/Madd_PCnew_mux0003_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<11> (element5/Madd_PCnew_mux0003_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<12> (element5/Madd_PCnew_mux0003_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  element5/Madd_PCnew_mux0003_cy<13> (element5/Madd_PCnew_mux0003_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  element5/Madd_PCnew_mux0003_cy<14> (element5/Madd_PCnew_mux0003_cy<14>)
+     XORCY:CI->O           1   0.804   0.000  element5/Madd_PCnew_mux0003_xor<15> (element5/PCnew_mux0003<15>)
+     LD:D                      0.308          element5/PCnew_15
+    ----------------------------------------
+    Total                      6.122ns (5.028ns logic, 1.094ns route)
+                                       (82.1% logic, 17.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'element1/TIMEOUT_21'
+  Total number of paths / destination ports: 72 / 72
+-------------------------------------------------------------------------
+Offset:              4.479ns (Levels of Logic = 1)
+  Source:            element6/nWR (LATCH)
+  Destination:       RD (PAD)
+  Source Clock:      element1/TIMEOUT_21 falling
+
+  Data Path: element6/nWR to RD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP:G->Q              3   0.676   0.531  element6/nWR (element6/nWR)
+     OBUF:I->O                 3.272          RD_OBUF (RD)
+    ----------------------------------------
+    Total                      4.479ns (3.948ns logic, 0.531ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'element6/Mtrien_DBUS<0>_not0001'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            element6/Mtrien_DBUS<0> (LATCH)
+  Destination:       DBUS<0> (PAD)
+  Source Clock:      element6/Mtrien_DBUS<0>_not0001 falling
+
+  Data Path: element6/Mtrien_DBUS<0> to DBUS<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.676   0.420  element6/Mtrien_DBUS<0> (element6/Mtrien_DBUS<0>)
+     IOBUF:T->IO               3.272          DBUS_0_IOBUF (DBUS<0>)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            element2/IR_15_1 (LATCH)
+  Destination:       IROUT<15> (PAD)
+  Source Clock:      RST rising
+
+  Data Path: element2/IR_15_1 to IROUT<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.676   0.420  element2/IR_15_1 (element2/IR_15_1)
+     OBUF:I->O                 3.272          IROUT_15_OBUF (IROUT<15>)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              5.163ns (Levels of Logic = 1)
+  Source:            element1/TIMEOUT_0 (FF)
+  Destination:       TIMEOUT<0> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: element1/TIMEOUT_0 to TIMEOUT<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q           152   0.591   1.300  element1/TIMEOUT_0 (element1/TIMEOUT_01)
+     OBUF:I->O                 3.272          TIMEOUT_0_OBUF (TIMEOUT<0>)
+    ----------------------------------------
+    Total                      5.163ns (3.863ns logic, 1.300ns route)
+                                       (74.8% logic, 25.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.79 secs
+ 
+--> 
+
+Total memory usage is 195708 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   88 (   0 filtered)
+Number of infos    :   40 (   0 filtered)
+

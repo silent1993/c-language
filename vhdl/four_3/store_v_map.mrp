@@ -1,0 +1,245 @@
+Release 14.4 Map P.49d (nt)
+Xilinx Mapping Report File for Design 'store_v'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off
+-c 100 -o store_v_map.ncd store_v.ngd store_v.pcf 
+Target Device  : xc3s500e
+Target Package : pq208
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Wed Jul 02 10:07:22 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    4
+Logic Utilization:
+  Number of Slice Latches:               32 out of   9,312    1%
+  Number of 4 input LUTs:                64 out of   9,312    1%
+Logic Distribution:
+  Number of occupied Slices:             33 out of   4,656    1%
+    Number of Slices containing only related logic:      33 out of      33 100%
+    Number of Slices containing unrelated logic:          0 out of      33   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:          64 out of   9,312    1%
+  Number of bonded IOBs:                 93 out of     158   58%
+    IOB Latches:                         32
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Average Fanout of Non-Clock Nets:                2.59
+
+Peak Memory Usage:  204 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net Mtrien_data<0>_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net Mtrien_data<10>_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <k4<5>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <k4<6>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network k4<6>_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
+   (max. 5 shown):
+   k4<5>_IBUF
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+
+Section 5 - Removed Logic
+-------------------------
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ad<0>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<1>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<2>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<3>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<4>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<5>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<6>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<7>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<8>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<9>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<10>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<11>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| ad<12>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| ad<13>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| ad<14>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| ad<15>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| bh                                 | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| bl                                 | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| cs                                 | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| data<0>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<1>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<2>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<3>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<4>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<5>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<6>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<7>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<8>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<9>                            | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<10>                           | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<11>                           | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<12>                           | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<13>                           | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<14>                           | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| data<15>                           | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW | TFF1         |          | 0 / 0    |
+| k0<0>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k0<1>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k0<2>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k0<3>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k0<4>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k0<5>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k0<6>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k0<7>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k1<0>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k1<1>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k1<2>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k1<3>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k1<4>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k1<5>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k1<6>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k1<7>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k2<0>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k2<1>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k2<2>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k2<3>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k2<4>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k2<5>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k2<6>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k2<7>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k3<0>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k3<1>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k3<2>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k3<3>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k3<4>                              | IBUF             | INPUT     | LVTTL                |       |          |      | IFF1         |          | 0 / 3    |
+| k3<5>                              | IBUF             | INPUT     | LVTTL                |       |          |      | IFF1         |          | 0 / 3    |
+| k3<6>                              | IBUF             | INPUT     | LVTTL                |       |          |      | IFF1         |          | 0 / 3    |
+| k3<7>                              | IBUF             | INPUT     | LVTTL                |       |          |      | IFF1         |          | 0 / 3    |
+| k4<0>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k4<1>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k4<2>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k4<3>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k4<4>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k4<5>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k4<6>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| k4<7>                              | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| rd                                 | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s0<0>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s0<1>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s0<2>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s0<3>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s0<4>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s0<5>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s0<6>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s0<7>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s1<0>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s1<1>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s1<2>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s1<3>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s1<4>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s1<5>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s1<6>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| s1<7>                              | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| wr                                 | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

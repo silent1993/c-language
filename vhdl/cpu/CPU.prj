@@ -1,0 +1,7 @@
+vhdl work "visit_M.vhd"
+vhdl work "quzhi.vhd"
+vhdl work "number1.vhd"
+vhdl work "ctrl_M.vhd"
+vhdl work "back.vhd"
+vhdl work "alu.vhd"
+vhdl work "CPU.vhd"

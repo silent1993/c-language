@@ -1,0 +1,5 @@
+V3 3
+FL D:/vhdl/four_3/store_v.vhd 2014/07/02.09:59:28 P.49d
+EN work/store_v 1404266370 FL D:/vhdl/four_3/store_v.vhd PB ieee/std_logic_1164 1354696159
+AR work/store_v/Behavioral 1404266371 \
+      FL D:/vhdl/four_3/store_v.vhd EN work/store_v 1404266370

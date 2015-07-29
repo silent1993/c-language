@@ -1,0 +1,2 @@
+vhdl isim_temp "state.vhd"
+vhdl isim_temp "state_TB.vhd"

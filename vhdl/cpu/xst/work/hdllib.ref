@@ -1,0 +1,14 @@
+AR number1 behavioral D:/vhdl/cpu/number1.vhd sub00/vhpl01 1405406929
+EN back NULL D:/vhdl/cpu/back.vhd sub00/vhpl08 1405406936
+AR alu behavioral D:/vhdl/cpu/alu.vhd sub00/vhpl05 1405406933
+AR cpu behavioral D:/vhdl/cpu/CPU.vhd sub00/vhpl13 1405406941
+AR visit_m behavioral D:/vhdl/cpu/visit_M.vhd sub00/vhpl07 1405406935
+EN cpu NULL D:/vhdl/cpu/CPU.vhd sub00/vhpl12 1405406940
+AR ctrl_m behavioral D:/vhdl/cpu/ctrl_M.vhd sub00/vhpl11 1405406939
+AR quzhi behavioral D:/vhdl/cpu/quzhi.vhd sub00/vhpl03 1405406931
+EN ctrl_m NULL D:/vhdl/cpu/ctrl_M.vhd sub00/vhpl10 1405406938
+EN number1 NULL D:/vhdl/cpu/number1.vhd sub00/vhpl00 1405406928
+EN visit_m NULL D:/vhdl/cpu/visit_M.vhd sub00/vhpl06 1405406934
+EN quzhi NULL D:/vhdl/cpu/quzhi.vhd sub00/vhpl02 1405406930
+AR back behavioral D:/vhdl/cpu/back.vhd sub00/vhpl09 1405406937
+EN alu NULL D:/vhdl/cpu/alu.vhd sub00/vhpl04 1405406932

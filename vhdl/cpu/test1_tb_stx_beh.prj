@@ -1,0 +1,4 @@
+vhdl isim_temp "quzhi.vhd"
+vhdl isim_temp "number1.vhd"
+vhdl isim_temp "test1.vhd"
+vhdl isim_temp "test1_tb.vhd"

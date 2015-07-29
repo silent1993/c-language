@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sections>
+  <WaveBank Name="bank2">Wave Bank
+{
+    Name = bank2;
+    Xbox File = Xbox\bank2.xwb;
+    Windows File = Win\bank2.xwb;
+    Xbox Bank Path Edited = 0;
+    Windows Bank Path Edited = 0;
+    Seek Tables = 1;
+    Compression Preset Name = &lt;none&gt;;
+    Xbox Bank Last Modified Low = 0;
+    Xbox Bank Last Modified High = 0;
+    PC Bank Last Modified Low = 0;
+    PC Bank Last Modified High = 0;
+    Header Last Modified Low = 0;
+    Header Last Modified High = 0;
+    Bank Last Revised Low = 4036717094;
+    Bank Last Revised High = 30384782;
+
+    Wave
+    {
+        Name = Tank;
+        File = tank.wav;
+        Build Settings Last Modified Low = 2998854768;
+        Build Settings Last Modified High = 30384777;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 787968;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3965747940;
+            Last Modified High = 30384775;
+        }
+    }
+
+    Wave
+    {
+        Name = E1;
+        File = E1.wav;
+        Build Settings Last Modified Low = 2212756869;
+        Build Settings Last Modified High = 30384779;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 525312;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3552075120;
+            Last Modified High = 30384775;
+        }
+    }
+}
+
+</WaveBank>
+</Sections>

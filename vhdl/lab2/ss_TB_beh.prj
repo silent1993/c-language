@@ -1,0 +1,3 @@
+vhdl work "move.vhd"
+vhdl work "ss.vhd"
+vhdl work "ss_TB.vhd"

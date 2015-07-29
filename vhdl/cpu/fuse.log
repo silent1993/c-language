@@ -1,0 +1,35 @@
+Running: F:\xilink\14.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o D:/vhdl/cpu/cpu_tb_isim_beh.exe -prj D:/vhdl/cpu/cpu_tb_beh.prj work.cpu_tb 
+ISim P.49d (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/vhdl/cpu/visit_M.vhd" into library work
+Parsing VHDL file "D:/vhdl/cpu/quzhi.vhd" into library work
+Parsing VHDL file "D:/vhdl/cpu/number1.vhd" into library work
+Parsing VHDL file "D:/vhdl/cpu/ctrl_M.vhd" into library work
+Parsing VHDL file "D:/vhdl/cpu/back.vhd" into library work
+Parsing VHDL file "D:/vhdl/cpu/alu.vhd" into library work
+Parsing VHDL file "D:/vhdl/cpu/CPU.vhd" into library work
+Parsing VHDL file "D:/vhdl/cpu/cpu_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 99964 KB
+Fuse CPU Usage: 296 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity number1 [number1_default]
+Compiling architecture behavioral of entity quzhi [quzhi_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavioral of entity visit_M [visit_m_default]
+Compiling architecture behavioral of entity back [back_default]
+Compiling architecture behavioral of entity ctrl_M [ctrl_m_default]
+Compiling architecture behavioral of entity CPU [cpu_default]
+Compiling architecture behavior of entity cpu_tb
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 19 VHDL Units
+Built simulation executable D:/vhdl/cpu/cpu_tb_isim_beh.exe
+Fuse Memory Usage: 116880 KB
+Fuse CPU Usage: 452 ms

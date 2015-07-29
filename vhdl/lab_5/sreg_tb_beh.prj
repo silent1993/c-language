@@ -1,0 +1,2 @@
+vhdl work "sreg.vhd"
+vhdl work "sreg_tb.vhd"

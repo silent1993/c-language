@@ -1,0 +1,7 @@
+Content\Audio\Audio.xgs
+Content\Audio\mWave.xwb
+Content\Audio\mSound.xsb
+Content\Audio\Looplay.xgs
+Content\Audio\bank2.xwb
+Content\Audio\sound2.xsb
+Content\Audio\Sound Bank.xsb

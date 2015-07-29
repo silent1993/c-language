@@ -1,0 +1,36 @@
+Release 13.4 Map O.87xd (nt64)
+Xilinx Mapping Report File for Design 'lab01'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7a8-csg324-3 -w -logic_opt off -ol high
+-t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power
+off -o lab01_map.ncd lab01.ngd lab01.pcf 
+Target Device  : xc7a8
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : artix7 -- $Revision: 1.55 $
+Mapped Date    : Wed Mar 05 19:05:49 2014
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Security:11 - No 'xc7a8' feature version 2012.01 was available for 'ISE',
+ERROR:Map:258 - A problem was encountered attempting to get the license for this
+   architecture. 
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:Security:54 - 'xc7a8' is a Beta WebPack part.
+INFO:Security:54b - Beta part 'xc7a8' is not eligible for a WebPack license.
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - For more information or for assistance in obtaining 
+INFO:Security:68a - user is Administrator, on host HE-PC.

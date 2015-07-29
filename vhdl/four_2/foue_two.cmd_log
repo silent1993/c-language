@@ -1,0 +1,77 @@
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four.ucf -p xc3s500e-pq208-4 foue_two.ngc foue_two.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o foue_two_map.ncd foue_two.ngd foue_two.pcf 
+par -w -intstyle ise -ol high -t 1 foue_two_map.ncd foue_two.ncd foue_two.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml foue_two.twx foue_two.ncd -o foue_two.twr foue_two.pcf -ucf four.ucf 
+bitgen -intstyle ise -f foue_two.ut foue_two.ncd 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four.ucf -p xc3s500e-pq208-4 foue_two.ngc foue_two.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o foue_two_map.ncd foue_two.ngd foue_two.pcf 
+par -w -intstyle ise -ol high -t 1 foue_two_map.ncd foue_two.ncd foue_two.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml foue_two.twx foue_two.ncd -o foue_two.twr foue_two.pcf -ucf four.ucf 
+bitgen -intstyle ise -f foue_two.ut foue_two.ncd 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four.ucf -p xc3s500e-pq208-4 foue_two.ngc foue_two.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o foue_two_map.ncd foue_two.ngd foue_two.pcf 
+par -w -intstyle ise -ol high -t 1 foue_two_map.ncd foue_two.ncd foue_two.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml foue_two.twx foue_two.ncd -o foue_two.twr foue_two.pcf -ucf four.ucf 
+bitgen -intstyle ise -f foue_two.ut foue_two.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four.ucf -p xc3s500e-pq208-4 foue_two.ngc foue_two.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o foue_two_map.ncd foue_two.ngd foue_two.pcf 
+par -w -intstyle ise -ol high -t 1 foue_two_map.ncd foue_two.ncd foue_two.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml foue_two.twx foue_two.ncd -o foue_two.twr foue_two.pcf -ucf four.ucf 
+bitgen -intstyle ise -f foue_two.ut foue_two.ncd 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four.ucf -p xc3s500e-pq208-4 foue_two.ngc foue_two.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o foue_two_map.ncd foue_two.ngd foue_two.pcf 
+par -w -intstyle ise -ol high -t 1 foue_two_map.ncd foue_two.ncd foue_two.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml foue_two.twx foue_two.ncd -o foue_two.twr foue_two.pcf -ucf four.ucf 
+bitgen -intstyle ise -f foue_two.ut foue_two.ncd 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four.ucf -p xc3s500e-pq208-4 foue_two.ngc foue_two.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o foue_two_map.ncd foue_two.ngd foue_two.pcf 
+par -w -intstyle ise -ol high -t 1 foue_two_map.ncd foue_two.ncd foue_two.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml foue_two.twx foue_two.ncd -o foue_two.twr foue_two.pcf -ucf four.ucf 
+bitgen -intstyle ise -f foue_two.ut foue_two.ncd 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four.ucf -p xc3s500e-pq208-4 foue_two.ngc foue_two.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o foue_two_map.ncd foue_two.ngd foue_two.pcf 
+par -w -intstyle ise -ol high -t 1 foue_two_map.ncd foue_two.ncd foue_two.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml foue_two.twx foue_two.ncd -o foue_two.twr foue_two.pcf -ucf four.ucf 
+bitgen -intstyle ise -f foue_two.ut foue_two.ncd 
+xst -intstyle ise -ifn "D:/vhdl/four_2/foue_two.xst" -ofn "D:/vhdl/four_2/foue_two.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four.ucf -p xc3s500e-pq208-4 foue_two.ngc foue_two.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o foue_two_map.ncd foue_two.ngd foue_two.pcf 
+par -w -intstyle ise -ol high -t 1 foue_two_map.ncd foue_two.ncd foue_two.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml foue_two.twx foue_two.ncd -o foue_two.twr foue_two.pcf -ucf four.ucf 
+bitgen -intstyle ise -f foue_two.ut foue_two.ncd 

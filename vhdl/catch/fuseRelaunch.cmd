@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "I:/vhdl/catch/catch2114_tb_isim_beh.exe" -prj "I:/vhdl/catch/catch2114_tb_beh.prj" "work.catch2114_tb" 

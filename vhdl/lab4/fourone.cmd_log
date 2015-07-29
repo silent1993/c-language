@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "D:/vhdl/lab4/fourone.xst" -ofn "D:/vhdl/lab4/fourone.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/tecent/603003513/FileRecv/devicetest.ucf -p xc6slx16-csg324-3 fourone.ngc fourone.ngd  
+xst -intstyle ise -ifn "D:/vhdl/lab4/fourone.xst" -ofn "D:/vhdl/lab4/fourone.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/tecent/603003513/FileRecv/devicetest.ucf -p xc6slx16-csg324-3 fourone.ngc fourone.ngd  
+xst -intstyle ise -ifn "D:/vhdl/lab4/fourone.xst" -ofn "D:/vhdl/lab4/fourone.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/tecent/603003513/FileRecv/devicetest.ucf -p xc6slx16-csg324-3 fourone.ngc fourone.ngd  
+xst -intstyle ise -ifn "D:/vhdl/lab4/fourone.xst" -ofn "D:/vhdl/lab4/fourone.syr" 
+xst -intstyle ise -ifn "D:/vhdl/lab4/fourone.xst" -ofn "D:/vhdl/lab4/fourone.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/tecent/603003513/FileRecv/devicetest.ucf -p xc6slx16-csg324-3 fourone.ngc fourone.ngd  
+xst -intstyle ise -ifn "D:/vhdl/lab4/fourone.xst" -ofn "D:/vhdl/lab4/fourone.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/tecent/603003513/FileRecv/devicetest.ucf -p xc6slx16-csg324-3 fourone.ngc fourone.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fourone_map.ncd fourone.ngd fourone.pcf 
+xst -intstyle ise -ifn "D:/vhdl/lab4/fourone.xst" -ofn "D:/vhdl/lab4/fourone.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/tecent/603003513/FileRecv/devicetest.ucf -p xc3s500e-pq208-4 fourone.ngc fourone.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o fourone_map.ncd fourone.ngd fourone.pcf 
+par -w -intstyle ise -ol high -t 1 fourone_map.ncd fourone.ncd fourone.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourone.twx fourone.ncd -o fourone.twr fourone.pcf 
+bitgen -intstyle ise -f fourone.ut fourone.ncd 
+xst -intstyle ise -ifn "D:/vhdl/lab4/fourone.xst" -ofn "D:/vhdl/lab4/fourone.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/tecent/603003513/FileRecv/devicetest.ucf -p xc3s500e-pq208-4 fourone.ngc fourone.ngd  
+map -intstyle ise -p xc3s500e-pq208-4 -cm area -ir off -pr off -c 100 -o fourone_map.ncd fourone.ngd fourone.pcf 
+par -w -intstyle ise -ol high -t 1 fourone_map.ncd fourone.ncd fourone.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourone.twx fourone.ncd -o fourone.twr fourone.pcf 
+bitgen -intstyle ise -f fourone.ut fourone.ncd 

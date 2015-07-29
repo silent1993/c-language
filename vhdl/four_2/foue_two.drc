@@ -1,0 +1,8 @@
+Release 14.4 Drc P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Jul 02 13:43:27 2014
+
+drc -z foue_two.ncd foue_two.pcf
+
+DRC detected 0 errors and 0 warnings.

@@ -1,0 +1,33 @@
+V3 27
+FL D:/vhdl/cpu/alu.vhd 2014/07/13.10:36:09 P.49d
+EN work/alu 1405406932 FL D:/vhdl/cpu/alu.vhd PB ieee/std_logic_1164 1354696159 \
+      PB ieee/std_logic_arith 1354696160 PB ieee/STD_LOGIC_UNSIGNED 1354696162
+AR work/alu/Behavioral 1405406933 \
+      FL D:/vhdl/cpu/alu.vhd EN work/alu 1405406932
+FL D:/vhdl/cpu/back.vhd 2014/07/15.14:48:44 P.49d
+EN work/back 1405406936 FL D:/vhdl/cpu/back.vhd PB ieee/std_logic_1164 1354696159 \
+      PB ieee/std_logic_arith 1354696160 PB ieee/STD_LOGIC_UNSIGNED 1354696162
+AR work/back/Behavioral 1405406937 \
+      FL D:/vhdl/cpu/back.vhd EN work/back 1405406936
+FL D:/vhdl/cpu/CPU.vhd 2014/07/15.14:48:45 P.49d
+EN work/CPU 1405406940 FL D:/vhdl/cpu/CPU.vhd PB ieee/std_logic_1164 1354696159
+AR work/CPU/Behavioral 1405406941 \
+      FL D:/vhdl/cpu/CPU.vhd EN work/CPU 1405406940 CP number1 CP quzhi CP alu \
+      CP visit_M CP back CP ctrl_M
+FL D:/vhdl/cpu/ctrl_M.vhd 2014/07/14.20:08:55 P.49d
+EN work/ctrl_M 1405406938 FL D:/vhdl/cpu/ctrl_M.vhd PB ieee/std_logic_1164 1354696159
+AR work/ctrl_M/Behavioral 1405406939 \
+      FL D:/vhdl/cpu/ctrl_M.vhd EN work/ctrl_M 1405406938
+FL D:/vhdl/cpu/number1.vhd 2014/07/14.20:08:55 P.49d
+EN work/number1 1405406928 FL D:/vhdl/cpu/number1.vhd PB ieee/std_logic_1164 1354696159
+AR work/number1/Behavioral 1405406929 \
+      FL D:/vhdl/cpu/number1.vhd EN work/number1 1405406928
+FL D:/vhdl/cpu/quzhi.vhd 2014/07/15.14:30:12 P.49d
+EN work/quzhi 1405406930 FL D:/vhdl/cpu/quzhi.vhd PB ieee/std_logic_1164 1354696159 \
+      PB ieee/std_logic_arith 1354696160 PB ieee/STD_LOGIC_UNSIGNED 1354696162
+AR work/quzhi/Behavioral 1405406931 \
+      FL D:/vhdl/cpu/quzhi.vhd EN work/quzhi 1405406930
+FL D:/vhdl/cpu/visit_M.vhd 2014/07/14.20:18:25 P.49d
+EN work/visit_M 1405406934 FL D:/vhdl/cpu/visit_M.vhd PB ieee/std_logic_1164 1354696159
+AR work/visit_M/Behavioral 1405406935 \
+      FL D:/vhdl/cpu/visit_M.vhd EN work/visit_M 1405406934

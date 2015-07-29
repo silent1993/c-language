@@ -1,0 +1,2 @@
+vhdl work "state.vhd"
+vhdl work "state_TB.vhd"
